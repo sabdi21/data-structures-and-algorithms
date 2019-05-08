@@ -86,10 +86,8 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-const newArray = arr1.concat(arr2);
-console.log(newArray);
-};
-
+// arr1 = arr1.concat(arr2);
+?Array.protoype.push.apply(arr1, arr2)
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
