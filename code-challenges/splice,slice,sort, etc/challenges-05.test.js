@@ -82,11 +82,13 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  // // Solution code here...
   recipe.ingredients.forEach((ingredients => {
-    let foodList= recipe.indexOf(ingredients)
+    let foodList = recipe.indexOf(ingredients.slice(' ') +1);
+    result.push(foodList.slice())
 
   })
+  
     return result;
 };
 
@@ -156,6 +158,8 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
+  let str = [];
+  
 };
 
 
