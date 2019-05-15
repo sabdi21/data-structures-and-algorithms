@@ -27,8 +27,8 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  const myRe = /[A-Z][A-Za-z]*/g;
-  return str.match(myRe);
+  let myRegExpress = /[A-Z][A-Za-z]*/g;
+  return str.match(myRegExpress);
 };
 
 /* ------------------------------------------------------------------------------------------------
