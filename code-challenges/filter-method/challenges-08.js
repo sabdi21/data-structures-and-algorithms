@@ -8,7 +8,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-  const odds = arr.filter((val, idx) => {
+  const odds = arr.filter((val) => {
     return (val % 2);
   });
   return odds;
