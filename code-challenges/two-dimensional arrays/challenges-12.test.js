@@ -108,7 +108,8 @@ const battleship = (board, row, col) => {
     const battleArray = board[i];
 
     for(let j=0; j < battleArray.length; j++) {
-      if(row !== i || col !== j) {
+      //if(row[j] === i || col[i] === j) {
+      if(row !== i || col !== j) { 
         continue;
       }
       if(board[i][j] === '#'){
