@@ -54,10 +54,9 @@ const salesData = (hours, data) => {
   
   for(let i = 0; i < hours.length; i ++) {
     newArrayOfSalesPerHour.push ( { 
-        sales: `${data[i]} cookies`, 
-        time: `${hours[i]}` a.m
-        
-    )}
+      sales: `${data[i] } cookies`, 
+      time: `${hours[i]}`        
+    })
   }
   return newArrayOfSalesPerHour;
 };
@@ -104,6 +103,21 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+  
+  for(let i=0; i < board.length; i++) {
+    const battleArray = board[i];
+
+    for(let j=0; j < battleArray.length; j++) {
+      if(row !== i || col !== j) {
+        continue;
+      }
+      if(board[i][j] === '#'){
+        return "hit";
+      }else {
+        return "miss";
+      }
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
