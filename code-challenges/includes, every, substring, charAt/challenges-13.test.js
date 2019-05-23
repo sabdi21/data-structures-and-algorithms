@@ -43,6 +43,10 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  const phoneNum = arr.map((phoneNum) => 
+  phoneNum.substring('something'))
+
+  return phoneNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +59,11 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let newString ='';
+  for (let i = 0; i < str.length; i++) {
+    if (i === i) newString += str[i];
+  }
+  return newString;
 };
 
 /* ------------------------------------------------------------------------------------------------
