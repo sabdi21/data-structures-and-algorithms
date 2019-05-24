@@ -10,6 +10,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 const toTitleCase = (arr) => {
   // Solution code here...
+  return arr.map(firstLetter => firstLetter.charAt(0).toUpperCase()+firstLetter.substring(1, firstLetter.length));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,6 +86,16 @@ let starWarsData = [{
 
 let biggerThanLuke = (arr) => {
   // Solution code here...
+  if (objectValue === 'name'){
+    return arr.sort(function (a,b){
+      return a.name > b.name;
+    })
+  } else {
+    return arr.sort(function(a,b){
+      return a.mass > b.mass;
+    })
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
