@@ -1,5 +1,7 @@
 'use strict';
 
+import { statement } from "@babel/template";
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -52,6 +54,10 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  let newArray = arr.map( function (value) {
+    return value.charCodeAt();
+  })
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +72,17 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
+  let newArr = arr.map( function (value) {
+    // return (value & 1) ? 'odd' : 'even';
+    if (value % 2 === 0){
+      return 'even';
+    } else if (value % 2 === 1) {
+      return 'odd';
+    } else {
+      return 'N/A'
+    }
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,6 +129,8 @@ const snorlaxAbilities = {
 
 const extractAbilities = (arr) => {
   // Solution code here...
+  let newArr = arr.map( (val,idx) => val.ability.name);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,6 +178,11 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
   // Solution code here...
+  const extractStats = (arr) => {
+    let stats = arr.map( function (val, idx) {
+      return {name: val.stat.name, total: val.effort + val.baseStat};
+    })
+    return stats;
 };
 
 /* ------------------------------------------------------------------------------------------------
