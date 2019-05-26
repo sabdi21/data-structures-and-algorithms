@@ -39,6 +39,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  let result = arr.filter( city => city.match(/^[A-J]\w*/g))
+  return result;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +58,8 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  let regex = /(oct)/gmi;
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,6 +74,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 
 const noPunctuation = str => {
   // Solution code here...
+  return str.match(/\w+\s/g)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,6 +91,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 
 let hangman = (str) => {
   // Solution code here...
+  return str.replace(/[a|e|i|o|u]/g, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
