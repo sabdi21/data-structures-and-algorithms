@@ -23,7 +23,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  let vowelsRegex = /[aeiou]/i;
+  let vowelsRegex =  /a|e|i|o|u/i;
   const vowelsArr= arr.filter(val => {
     return val.match(vowelsRegex);
   });
@@ -82,12 +82,14 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  const allStats = arr.filter(val => {
-    //return (val.baseStat > minBaseStat);
-  });
-  return allStats;
-};
 
+  return arr.filter( (value) => value.baseStat>minBaseStat)
+
+};
+// const allStats = arr.filter(stat =>
+//   stat.baseStat > minBaseStat)
+
+// return allStats;
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 4. For this function, extend your solution from challenge 4 to only return the name of the stat, rather than the entire stat object.
@@ -96,6 +98,8 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
+  return arr.filter(element => element.baseStat > minBaseStat).map(element => element.stat.name)
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,6 +152,9 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  let noKids = arr.filter((character) => {
+    !character.children);
+  return noKids;
 };
 
 /* ------------------------------------------------------------------------------------------------

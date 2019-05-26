@@ -92,8 +92,8 @@ const reversedString = (arr) => {
   // Solution code here...
   return arr.reduce((acc, val => {
       return arr.push(acc);
-  }; 
-}
+  }) 
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -146,6 +146,11 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  let kids = arr.reduce( (accumulator, value, idx) => {
+    accumulator += value.children.length;
+  }, 0);
+  return accumulator;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
